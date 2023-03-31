@@ -1,0 +1,6 @@
+# -la commande ls permet de lister les fichiers dans un dossier
+# - la comande pdw permet de savoir à quelle repertoire nous nous trouvons 
+#- la commande cd permet de se deplacer dans un fichier 
+# la commande touch permet de creer un fichier dans un repertoire donné 
+# - la commande mkdir permet de creer un nouveau reperoire au dossier 
+# - la commande mv permet de renommer un fichier ou de la deplacer 

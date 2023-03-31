@@ -1,0 +1,111 @@
+Opérateur	Définition
+==	Permet de tester l’égalité sur les valeurs
+===	Permet de tester l’égalité en termes de valeurs et de types
+!=	Permet de tester la différence en valeurs
+<>	Permet également de tester la différence en valeurs
+!==	Permet de tester la différence en valeurs ou en types
+<	Permet de tester si une valeur est strictement inférieure à une autre
+>	Permet de tester si une valeur est strictement supérieure à une autre
+<=	Permet de tester si une valeur est inférieure ou égale à une autre
+>=	Permet de tester si une valeur est supérieure ou égale à une autre
+
+
+  <body>
+        <h1>Titre principal</h1>
+        <?php
+            $x = 4; //On affecte la valeur 4 à $x
+            $y = 2; //On affecte la valeur 2 à $y
+            
+            if(($x <= 1) == false){
+                echo '$x contient une valeur supérieure à 1';
+            }
+            
+            if(($x != $y) == false){
+                echo '$x et $y contiennent la même valeur';
+            }
+        ?>
+
+
+
+pérateurs	Associativité
+**	droite
+++ (incrémentation), -- (décrémentation)	droite
+!	droite
+*, /, %	gauche
++, -, .	gauche
+<, <=, >, >=	non-associatif
+==, ===, !=, !==, <>, <=>	non-associatif
+&&	gauche
+||	gauche
+??	droite
+? : (ternaire)	gauche
+=, +=, -=, *=, /=, %=, **=, .=	droite
+AND	gauche
+XOR	gauche
+OR	gauche
+
+        <p>Un paragraphe</p>
+
+
+
+         
+    <body>
+        <h1>Titre principal</h1>
+        <?php
+            $x = 4; //On affecte la valeur 4 à $x
+            
+            //Ecrire ceci :
+            if($x >= 0){
+                echo '$x stocke un nombre positif<br>';
+            }else{
+                echo '$x stocke un nombre négatif<br>';
+            }
+            
+            //Est equivalent à cela :
+            echo $x >= 0 ? '$x stocke un nb positif' : '$x stocke un nb négatif'; 
+        ?>
+
+
+<h1>Titre principal</h1>
+        <?php
+            $x = 4; //On affecte la valeur 4 à $x
+            
+            //Ecrire ceci :
+            if($x >= 0){
+                echo ($x >= 0).'<br>';
+            }else{
+                echo '$x stocke un nombre négatif<br>';
+            }
+            
+            //Est equivalent à cela :
+            echo $x >= 0 ?: '$x stocke un nb négatif'; 
+        ?>
+
+
+<?php
+            $x = 4; //On affecte la valeur 4 à $x
+            $y = NULL;
+            $z;
+            
+            $resultatx = $x ?? 'NULL';
+            $resultaty = $y ?? 'NULL';
+            $resultatz = $z ?? 'NULL';
+            
+            echo '$x contient ' .$resultatx. '<br>
+                  $y contient ' .$resultaty. '<br>
+                  $z contient ' .$resultatz;
+        ?>
+        <p>Un paragraphe</p>
+
+
+
+        Nom de la constante	Description
+__FILE__	Contient le chemin complet et le nom du fichier
+__DIR__	Contient le nom du dossier dans lequel est le fichier
+__LINE__	Contient le numéro de la ligne courante dans le fichier
+__FUNCTION__	Contient le nom de la fonction actuellement définie ou {closure} pour les fonctions anonymes
+__CLASS__	Contient le nom de la classe actuellement définie
+__METHOD__	Contient le nom de la méthode actuellement utilisée
+__NAMESPACE__	Contient le nom de l’espace de noms (« namespace ») courant
+__TRAIT__	Contient le nom du trait (incluant le nom de l’espace de noms dans lequel il a été déclaré)
+ClassName::class	Contient le nom entièrement qualifié de la classe
